@@ -1,5 +1,5 @@
 - name: installing nginx in nodeserver
-  host: mongodb
+  hosts: mongodb
   become: yes
   tasks:
     - name: installing nginx
