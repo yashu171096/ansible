@@ -1,0 +1,9 @@
+- name: simple condition
+  hosts: localhost
+  vars:
+  - NAME: "yashwanth"
+  tasks: 
+  - name: run this if the name is yashwanth
+    ansibile.builtin.debug:
+      msg: "my name is {{NAME}}"
+    when: NAME == "yashwanth"   

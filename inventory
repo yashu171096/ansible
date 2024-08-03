@@ -1,2 +1,4 @@
 [mongodb]
 roboshop-us-dev-db-mongodb-01.devops76.tech
+[mongodb:vars]
+NAME="yashwanth"

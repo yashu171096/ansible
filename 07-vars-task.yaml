@@ -1,0 +1,16 @@
+- name: variables from task
+  hosts: localhost
+  vars:
+  - amount: "3lakh"
+    lands: "3acres"
+  tasks:
+  - name: printing values from the playvars
+    ansible.builtin.debug:
+      msg: "AMOUNT is {{amount}} , LANDS is {{lands}}"
+  - name: overdo,carrying,adding fron playvars
+    vars:
+    - amount: "3lakh"
+      lands: "2acres"
+      houses: "1house"
+    ansible.builtin.debug:
+      msg: "AMOUNT is {{amount}}, LANDS is {{lands}}, HOUSES ARE {{houses}}"      

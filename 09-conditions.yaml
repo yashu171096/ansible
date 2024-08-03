@@ -1,0 +1,18 @@
+- name: creating username
+  hosts: localhost
+  tasks:
+  - name: checking username exits or not
+    ansible.builtin.command: id yashwanth
+    register: "out"
+    ignore_errors: true
+  - name: printing the command output
+    ansible.builtin.debug:
+      msg: "output is {{out}}"
+  - name: printing the exit status
+    ansible.builtin,debug:
+      msg: "exit status is {{out.rc}}"
+  - name: creating user
+    become: yes
+    ansible.builtin.user:
+      name: yashwanth
+    when: out.rc != 0  
