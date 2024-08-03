@@ -4,6 +4,6 @@
     NAME: yashwanth
   tasks: 
   - name: run this if the name is yashwanth
-    ansibile.builtin.debug:
+    ansible.builtin.debug:
       msg: "my name is {{NAME}}"
     when: NAME == "yashwanth"   
