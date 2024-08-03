@@ -3,4 +3,4 @@
   tasks:
   - name: printing the variable from the commane line
     ansible.builtin.debug:
-      msg: "course is {{COURSE}} 
+      msg: course is "{{COURSE}}" 
