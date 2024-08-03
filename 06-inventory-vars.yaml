@@ -3,4 +3,4 @@
   tasks:
   - name: printing the variable values from inventory
     ansible.builtin.debug:
-    msg: "username is {{NAME}}"
+      msg: "username is {{NAME}}"
