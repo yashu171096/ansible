@@ -9,7 +9,7 @@
     ansible.builtin.debug:
       msg: "output is {{out}}"
   - name: printing the exit status
-    ansible.builtin,debug:
+    ansible.builtin.debug:
       msg: "exit status is {{out.rc}}"
   - name: creating user
     become: yes
